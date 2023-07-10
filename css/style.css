@@ -1,20 +1,81 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    color: black;
+    size: 14px;
+    font-weight: 400;
+    color:black;
     text-decoration: none; /* suppression des liens soulignés */
+    margin:0px;
+}
+
+
+h1 {
+    size: 22px;
+    font-weight: 700;
+}
+
+h2 {
+    size: 16px;
+    font-weight: 700;
+}
+
+h3 {
+    size: 14px;
+    font-weight: 700;
 }
 
 * ul {
     list-style-type: none;
   }
 
+main {
+    margin: 50px;
+}
+
 .container {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: top;
 }
 
+.container img {
+    width: 61.09px;
+    height: 19px;
+    padding: 30px 50px 30px 50px;
+}
+
+.container-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+    padding: 0px 50px 0px 50px;
+}
+
+.container li {
+    padding: 19px 3px 30px 3px;
+    size:16px;
+    margin: 0px 30px 0px 30px;
+
+}
+
+
+.container li:hover {
+    border-top: 2px solid #0065FC;
+    cursor: pointer;
+}
+
+.container a:hover {
+    color:#0065FC;
+}
+
+
+
+/****** Pas encore utilisé ***********/
+
+/*
 .card-horizontal {
     background-color: white;
     border-radius: 20px;
@@ -35,7 +96,6 @@
 }
 
 
-/****** Pas encore utilisé ***********/
 
 :root {
     --main-color: #0065FC;
@@ -47,10 +107,7 @@
     color: var(--main-color);
 }
 
-body {
-    display: flex;
-    justify-content: center;
-}
+
 
 .main-container {
     width: 100%;
@@ -69,6 +126,8 @@ body {
 }
 
 /****** Hebergements And Populaires ***********/
+
+/*
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -82,11 +141,15 @@ body {
 }
 
 /****** Hebergements ***********/
+
+/*
 .hebergements {
     width: 65%;
 }
 
 /****** Populaires ***********/
+
+/*
 .populaires {
     width: 32%;
 }
@@ -138,6 +201,8 @@ body {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
+
+/*
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -172,6 +237,25 @@ body {
 }
 
 /* Small devices (phones, less than 768px) */
+
 @media (max-width: 767.98px) {
-    /* ... */
+
+    .container li:hover {
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+        cursor: pointer;
+    }
+
+    .container {
+        display:flex;
+        flex-direction: column;   
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container li {
+        border-bottom: 2px solid #f2f2f2;
+        padding: 0px 30px 30px 30px;
+        margin: 30px 0px 0px 0px;
+    }
 }
