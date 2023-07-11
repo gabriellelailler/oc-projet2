@@ -8,7 +8,6 @@
     margin:0px;
 }
 
-
 h1 {
     size: 22px;
     font-weight: 700;
@@ -29,8 +28,14 @@ h3 {
   }
 
 main {
-    margin: 50px;
+    margin: 0px 50px 0px 50px;
 }
+
+.title, .search, .filter, .info-nb-housing, .hebergements, .populaires {
+    margin: 15px 0px 15px 0px;
+}
+
+/** Header **/
 
 .container {
     display:flex;
@@ -56,11 +61,10 @@ main {
 
 .container li {
     padding: 19px 3px 30px 3px;
-    size:16px;
+    font-size:19px;
     margin: 0px 30px 0px 30px;
 
 }
-
 
 .container li:hover {
     border-top: 2px solid #0065FC;
@@ -70,6 +74,92 @@ main {
 .container a:hover {
     color:#0065FC;
 }
+
+/** Barre de recherche **/
+
+.location-icon, input {
+    padding: 3px 8px 3px 8px;
+}
+
+.search p, input {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.search{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.location-icon {
+    border: solid;
+    border-color: #f2f2f2;
+    border-radius: 15px 0px 0px 15px;
+    border-width: 1px 0px 1px 1px;
+    background-color: #f2f2f2;
+    height: 41px;
+    width: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    border: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: #f2f2f2;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rechercher-large-screen input, .rechercher-small-screen input{
+    border: solid;
+    border-color: #0065FC;
+    border-width: 1px 1px 1px 0px;
+    height: 49px;
+    width: 132px;
+    background-color: #0065FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.rechercher-large-screen input {
+    width: 132px;
+    border-radius: 0px 15px 15px 0px;
+
+}
+
+.rechercher-small-screen input {
+    width: 50px;
+    border-radius: 15px 15px 15px 15px;
+
+}
+
+.rechercher-small-screen {
+    position: relative;
+    display: inline-block;
+
+}
+
+.rechercher-small-screen i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden-input {
+    display:none;
+}
+
 
 
 
@@ -236,6 +326,16 @@ main {
     }
 }
 
+/* Large devices (tablets, less/equal than 1024px) */
+
+@media (min-width: 767.99px) {
+
+    .rechercher-small-screen {
+        display: none;
+      }
+    
+}
+
 /* Small devices (phones, less than 768px) */
 
 @media (max-width: 767.98px) {
@@ -258,4 +358,9 @@ main {
         padding: 0px 30px 30px 30px;
         margin: 30px 0px 0px 0px;
     }
+
+    .rechercher-large-screen {
+        display: none;
+      }
+    
 }

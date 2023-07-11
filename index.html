@@ -42,11 +42,27 @@
                     <br>
                     <p>En plein centre-ville ou en pleine nature</p>
                 </div>
-                <div class="search">
-                    <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                    <p>Marseille, France</p>
-                    <p class="rechercher">Rechercher</p>
-                </div>
+
+                <form method="get" action="">
+                    <div class="search">
+                        <div class="location-icon">
+                            <i class="fa-lg fa-solid fa-location-dot" aria-hidden="true"></i>
+                        </div>
+                            <div>
+                                <p>
+                                    <input class="search-bar" type="search" name="ville" placeholder="Marseille, France" size="20">
+                                </p>
+                            </div>
+                            <div class="rechercher-large-screen">
+                                <input type="submit" value="Rechercher">
+                            </div>
+                            <div class="rechercher-small-screen">
+                                <input type="submit" value= "" class="hidden-input">
+                                <i class="fa-lg fa-solid fa-magnifying-glass" aria-hidden="true" style="color:white"></i>
+                            </div>
+                        
+                    </div>
+                </form>
                 <div class="filter">
                     <div class="search-title">
                         <h3>Filtres</h3>
