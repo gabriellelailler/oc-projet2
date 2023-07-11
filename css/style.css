@@ -32,7 +32,7 @@ main {
 }
 
 .title, .search, .filter, .info-nb-housing, .hebergements, .populaires {
-    margin: 15px 0px 15px 0px;
+    margin: 40px 0px 40px 0px;
 }
 
 /** Header **/
@@ -160,6 +160,46 @@ main {
     display:none;
 }
 
+/** Filtre **/
+
+.filter-title{
+    margin: 8px 25px 8px 0px;
+}
+
+.search-buttons, .search-button, .filter {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-button {
+    flex-wrap: nowrap;
+    padding: 10px 25px 10px 25px;
+    border: solid 2px #d9d9d9;
+    border-radius: 25px 25px 25px 25px;
+    margin: 8px 25px 8px 0px;
+}
+
+.search-buttons {
+    flex-wrap: wrap;
+}
+
+.search-buttons :hover {
+    background-color: #deebff;
+    cursor: pointer;
+
+}
+
+.search-button p {
+    font-weight: 700;
+    padding: 0px 0px 0px 6px;
+    font-size: 16px;
+}
+
+.search-button i {
+    font-weight: 700;
+    padding: 0px 6px 0px 0px;
+}
 
 
 
@@ -326,15 +366,34 @@ main {
     }
 }
 
-/* Large devices (tablets, less/equal than 1024px) */
+/* Desktop (more than 1024px) */
 
-@media (min-width: 767.99px) {
+@media (min-width: 1024.01px) {
 
     .rechercher-small-screen {
         display: none;
       }
     
 }
+
+
+/* Large devices (tablets, less/equal than 1024px) */
+
+@media (max-width: 1024px) {
+
+    .rechercher-small-screen {
+        display: none;
+      }
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+}
+
+
 
 /* Small devices (phones, less than 768px) */
 
@@ -361,6 +420,10 @@ main {
 
     .rechercher-large-screen {
         display: none;
-      }
+    }
+    
+    .rechercher-small-screen {
+        display:inline;
+    }
     
 }
