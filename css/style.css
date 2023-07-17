@@ -1,4 +1,4 @@
-/****** General ***********/
+/** 1. General **/
 * {
   font-family: "Raleway", sans-serif;
   color: black;
@@ -50,7 +50,7 @@ p {
   color: var(--main-color);
 }
 
-/** Header & Footer **/
+/** 2. Header & Footer */
 
 .header-container {
   display: flex;
@@ -116,7 +116,7 @@ p {
   cursor: pointer;
 }
 
-/** Searchbar & filter **/
+/* 3. Searchbar & filter */
 
 .main-container {
   width: 100%;
@@ -125,7 +125,7 @@ p {
   box-sizing: border-box;
 }
 
-/** Searchbar **/
+/* Searchbar */
 
 .location-icon,
 input {
@@ -223,7 +223,7 @@ input {
   color: black;
 }
 
-/** Filter **/
+/* Filter */
 
 .filter-title {
   margin: 8px 25px 8px 0px;
@@ -269,7 +269,7 @@ input {
   color: var(--dark-gray);
 }
 
-/** 2ND CONTAINER : Housing & trending **/
+/** 4. Housing, trending, activities **/
 
 .housing-and-trending {
   padding: 0px 50px 0px 50px;
@@ -289,8 +289,8 @@ input {
   cursor: pointer;
 }
 
-.housing-and-trending h2 {
-  margin: 0;
+.card-content {
+  padding: 10px;
 }
 
 .card img {
@@ -300,14 +300,18 @@ input {
 .housing-cards h3,
 .trending-cards h3,
 .activities-cards h3 {
-  margin-top: 10px;
+  margin-top: 4px;
   margin-bottom: 4px;
+}
+
+.activities-cards h3 {
+  padding: 10px 20px 20px 20px;
 }
 
 .housing-cards p,
 .trending-cards p,
 .activities-cards p {
-  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .euro {
@@ -330,43 +334,8 @@ input {
   box-sizing: border-box;
 }
 
-.card-subtitle {
-  margin: 0;
-}
-
-.card-rating {
-  margin-bottom: 5px;
-  margin-top: 2px;
-}
-
-/****** Housing ***********/
-
-.housing {
-  width: 65%;
-}
-
-.housing-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.housing-cards .card {
-  width: calc(33.33% - 20px);
-  margin-top: 30px;
-}
-
-.housing-cards img {
-  height: 124px;
-  width: 268px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  width: calc(100% - 0px);
-}
-
-.housing-cards .card-content {
+.housing-cards .card-content,
+.trending-cards .card-content {
   padding-left: 10px;
   display: flex;
   flex-direction: column;
@@ -374,37 +343,57 @@ input {
   box-sizing: border-box;
 }
 
-.housing-plus {
-  padding-top: 20px;
+.housing {
+  width: 65%;
 }
-
-.housing-plus p {
-  font-weight: 700;
-}
-
-.housing-plus :hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/****** Trending ***********/
 
 .trending {
   width: 32%;
-  padding: 30px;
 }
 
-/* icone donc besoin d'un flex ci-dessous */
-.trending-title {
+.activities {
+  padding: 25px 50px 50px 50px;
+  box-sizing: border-box;
+}
+
+.housing-cards,
+.activities-cards {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-/* */
+
+.card {
+  margin-top: 30px;
+}
+
+.housing-cards .card {
+  width: calc(33.33% - 20px);
+}
 
 .trending-cards .card {
   display: flex;
-  margin-top: 33px;
+  flex-direction: row;
+}
+
+.activities-cards .card {
+  width: calc(25% - 20px);
+  padding: 0px;
+}
+
+.housing-cards img,
+.activities-cards img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.housing-cards img {
+  height: 124px;
+  width: 268px;
+
+  width: calc(100% - 0px);
 }
 
 .trending-cards img {
@@ -414,52 +403,29 @@ input {
   border-bottom-left-radius: 20px;
 }
 
-.trending-cards .card-content {
-  width: 67%;
-  padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
+.activities-cards img {
+  width: 100%;
+  height: 380px;
 }
 
-/** 3RD CONTAINER : activities **/
+.housing-plus p {
+  padding-top: 20px;
+  font-weight: 700;
+}
 
-.activities {
-  padding: 25px 50px 50px 50px;
-  box-sizing: border-box;
+.housing-plus :hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.trending-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .activities h2 {
   margin: 0px 0px 0px 20px;
-}
-
-.activities-cards {
-  padding: 0px 10px 0px 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.activities-cards .card {
-  width: calc(25% - 20px);
-  margin-top: 30px;
-}
-
-.activities-cards img {
-  width: 100%;
-  height: 380px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.activities-cards .card {
-  padding: 0px;
-}
-
-.activities-cards h3 {
-  padding: 10px 20px 20px 20px;
 }
 
 /* VERSION RESPONSIVE */
@@ -491,7 +457,7 @@ input {
     align-items: flex-start;
   }
 
-  /** 2ND CONTAINER : Housing & trending **/
+  /** 4. Housing, trending, activities **/
 
   .housing-and-trending {
     display: flex;
@@ -499,13 +465,9 @@ input {
     justify-content: space-between;
   }
 
-  /****** Housing ***********/
-
   .housing {
     width: 100%;
   }
-
-  /****** Trending ***********/
 
   .trending {
     width: 100%;
@@ -517,16 +479,10 @@ input {
     justify-content: space-between;
   }
 
-  .card-subtitle {
-    font-size: 13px;
-  }
-
   .trending-cards .card {
     width: calc(33.33% - 20px);
     margin-bottom: 20px;
   }
-
-  /** 3RD CONTAINER : activities **/
 
   .activities-cards img {
     height: 200px;
@@ -576,7 +532,7 @@ input {
     margin: 0px 0px 0px 20px;
   }
 
-  /** 2ND CONTAINER : Housing & trending **/
+  /** 4. Housing, trending, activities **/
 
   .housing-and-trending {
     display: flex;
@@ -601,44 +557,41 @@ input {
     align-items: center;
   }
 
-  .trending-cards .card {
+  .trending-cards .card,
+  .housing-cards .card,
+  .activities-cards .card {
     width: calc(100% - 0px);
+  }
+
+  .activities-cards img {
+    height: 141px;
   }
 
   .housing-and-trending .housing {
     background-color: white;
   }
 
-  .housing-cards .card,
-  .activities-cards .card {
-    width: calc(100% - 0px);
-    margin-bottom: 0px;
-  }
-
-  #card-1 {
+  #housing-card-1 {
     order: 1;
   }
 
-  #card-2 {
+  #housing-card-2 {
     order: 6;
   }
 
-  #card-3 {
+  #housing-card-3 {
     order: 3;
   }
 
-  #card-4 {
+  #housing-card-4 {
     order: 4;
   }
 
-  #card-5 {
+  #housing-card-5 {
     order: 2;
   }
 
-  #card-6 {
+  #housing-card-6 {
     order: 5;
-  }
-  .activities-cards img {
-    height: 141px;
   }
 }
