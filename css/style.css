@@ -4,7 +4,11 @@
   color: black;
   font-size: 14px;
   text-decoration: none; /* suppression des liens soulignés */
-  margin: 0px;
+  margin: 0%;
+}
+
+ul {
+  padding: 0px;
 }
 
 :root {
@@ -54,10 +58,8 @@ p {
 
 .header-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: top;
+  flex-wrap: nowrap;
 }
 
 .header-container img {
@@ -66,26 +68,27 @@ p {
   padding: 30px 50px 30px 50px;
 }
 
-.header-container-nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0px 50px 0px 50px;
-}
-
-.header-container li {
-  padding: 19px 3px 30px 3px;
-  font-size: 19px;
+.header-nav div {
+  padding: 20px 3px 30px 3px;
   margin: 0px 30px 0px 30px;
+  font-size: 18px;
 }
 
-.header-container li:hover {
+.header-nav {
+  display: flex;
+}
+
+.header-nav a {
+  font-size: 16px;
+}
+
+.header-nav :hover {
+  font-size: 16px;
   border-top: 2px solid var(--main-color);
-  cursor: pointer;
 }
 
-.header-container a:hover {
+.header-nav-2 div :hover {
+  border-top: none;
   color: var(--main-color);
 }
 
@@ -99,7 +102,7 @@ p {
 
 .footer-container div {
   width: 30%;
-  padding: 30px;
+  padding: 40px;
 }
 
 .footer-container h3 {
@@ -229,15 +232,15 @@ input {
   margin: 8px 25px 8px 0px;
 }
 
-.search-buttons,
-.search-button,
+.filter-buttons,
+.filter-button,
 .filter {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.search-button {
+.filter-button {
   flex-wrap: nowrap;
   padding: 10px 25px 10px 25px;
   border: solid 2px var(--dark-gray);
@@ -245,22 +248,22 @@ input {
   margin: 8px 25px 8px 0px;
 }
 
-.search-buttons {
+.filter-buttons {
   flex-wrap: wrap;
 }
 
-.search-buttons :hover {
+.filter-buttons :hover {
   background-color: var(--filter-bg-color);
   cursor: pointer;
 }
 
-.search-button p {
+.filter-button p {
   font-weight: 700;
   padding: 0px 0px 0px 6px;
   font-size: 16px;
 }
 
-.search-button i {
+.filter-button i {
   font-weight: 700;
   padding: 0px 6px 0px 0px;
 }
@@ -352,7 +355,7 @@ input {
 }
 
 .activities {
-  padding: 25px 50px 50px 50px;
+  padding: 30px;
   box-sizing: border-box;
 }
 
@@ -425,7 +428,7 @@ input {
 }
 
 .activities h2 {
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 0px;
 }
 
 /* VERSION RESPONSIVE */
@@ -492,23 +495,56 @@ input {
 /* Small devices (phones, less than 768px) */
 
 @media (max-width: 768px) {
-  .header-container li:hover {
-    border-top: none;
-    border-bottom: 2px solid #0065fc;
-    cursor: pointer;
+  /** 1. General **/
+
+  h1 {
+    font-size: 20px;
   }
+  h2 {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  /** 2. Header & Footer */
 
   .header-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
+  }
+  .header-container img {
+    text-align: center;
   }
 
-  .container li {
-    border-bottom: 2px solid #f2f2f2;
-    padding: 0px 30px 30px 30px;
-    margin: 30px 0px 0px 0px;
+  .header-img {
+    text-align: center;
+  }
+
+  .header-nav div {
+    border-bottom: 2px solid var(--main-bg-color);
+  }
+
+  .header-nav div {
+    width: 50%;
+    padding: 15px 0px 15px 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .header-nav :hover {
+    border-bottom: 2px solid var(--main-color);
+    border-top: none;
+  }
+
+  .header-nav div :hover {
+    border-bottom: none;
+    color: var(--main-color);
   }
 
   .rechercher-large-screen {
@@ -520,7 +556,7 @@ input {
   }
 
   .footer-container {
-    margin: 0px;
+    margin: 0%;
     background-color: var(--main-bg-color);
     display: flex;
     flex-direction: column;
@@ -528,8 +564,22 @@ input {
   }
 
   .footer-container div {
-    width: 100%;
-    margin: 0px 0px 0px 20px;
+    width: 70%;
+  }
+
+  /* 3. Searchbar & filter */
+
+  .search p,
+  input {
+    font-size: 14px;
+  }
+
+  .filter-button p {
+    font-size: 14px;
+  }
+
+  .search-bar {
+    width: 150px;
   }
 
   /** 4. Housing, trending, activities **/
@@ -539,11 +589,9 @@ input {
     flex-direction: column-reverse;
     justify-content: space-between;
     padding: 0px;
-    box-sizing: border-box;
   }
 
   .housing-and-trending section {
-    padding: 30px;
     border-radius: 0px;
     box-sizing: border-box;
   }
