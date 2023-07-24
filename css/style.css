@@ -471,14 +471,11 @@ input {
     justify-content: space-between;
   }
 
-  .housing {
-    width: 100%;
-  }
-
+  .housing,
   .trending {
     width: 100%;
   }
-
+  
   .trending-cards {
     display: flex;
     flex-direction: row;
