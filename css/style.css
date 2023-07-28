@@ -631,7 +631,9 @@ input {
   }
 
   .filter-buttons {
-    flex-wrap:wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
+    grid-gap: 10px;
 }
   .filter-button {
     margin: 4px;
