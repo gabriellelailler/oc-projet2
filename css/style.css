@@ -358,7 +358,7 @@ input {
 }
 
 .activities {
-  padding: 30px;
+  padding: 80px;
   box-sizing: border-box;
 }
 
@@ -502,6 +502,17 @@ input {
   }
   .filter-button p{
     font-size: 14px;
+  }
+
+  .activities-cards h3{
+    padding: 10px;
+    margin: 2 px 0px;
+  }
+  .footer-container div{
+    padding: 40px 0px 40px 40px;
+  }
+  .trending-cards .card-content {
+    padding-right: 0px;
   }
 }
 
@@ -663,8 +674,17 @@ input {
     height: 141px;
   }
 
+
   .housing-and-trending .housing {
     background-color: white;
+  }
+
+  .activities{
+    padding: 15px;
+  }
+
+  .activities-cards{
+    padding:5px;
   }
 
   #housing-card-1 {
