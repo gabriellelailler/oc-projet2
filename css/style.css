@@ -202,11 +202,12 @@ input {
 .rechercher-small-screen input {
   width: 50px;
   border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .rechercher-small-screen {
   position: relative;
-  display: inline-block;
+  display: inline-block; 
 }
 
 .rechercher-small-screen i {
@@ -490,18 +491,30 @@ input {
   .activities-cards img {
     height: 200px;
   }
+
+  .filter-buttons{
+    flex-wrap: nowrap;
+  }
+  .filter-button{
+    margin: 8px 20px 8px 0px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  .filter-button p{
+    font-size: 14px;
+  }
 }
 
 /* Small devices (phones, less than 768px) */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /** 1. General **/
 
   h1 {
     font-size: 20px;
   }
   h2 {
-    font-size: 14px;
+    font-size: 22px;
   }
 
   h3 {
@@ -528,13 +541,13 @@ input {
 
   .header-nav div {
     border-bottom: 2px solid var(--main-bg-color);
-  }
-
-  .header-nav div {
     width: 50%;
     padding: 15px 0px 15px 0px;
     margin: 0px;
     text-align: center;
+  }
+  .header-nav a {
+    font-size: 16px;
   }
 
   .header-nav :hover {
@@ -545,14 +558,6 @@ input {
   .header-nav div :hover {
     border-bottom: none;
     color: var(--main-color);
-  }
-
-  .rechercher-large-screen {
-    display: none;
-  }
-
-  .rechercher-small-screen {
-    display: inline;
   }
 
   .footer-container {
@@ -569,18 +574,60 @@ input {
 
   /* 3. Searchbar & filter */
 
+  .rechercher-large-screen {
+    display: none;
+  }
+
+  .rechercher-small-screen {
+    display: inline;
+    text-align: center;
+  }
+
+  .main-container{
+    padding: 15px;
+  }
+
+  .main-container form {
+    width: 100%;
+  }
   .search p,
   input {
     font-size: 14px;
   }
 
-  .filter-button p {
-    font-size: 14px;
+  .search {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0; /* Supprimer la marge */
+    padding: 0;
   }
 
-  .search-bar {
-    width: 150px;
+.search-bar{
+  width: 100%;
+}
+.search-bar-container{
+  flex-grow:1;
+}
+.location-icon {
+  flex-shrink: 0;
+}
+
+  .filter-button p {
+    font-size: 12px;
   }
+
+  .filter-buttons {
+    flex-wrap:wrap;
+}
+  .filter-button {
+    margin: 4px;
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
 
   /** 4. Housing, trending, activities **/
 
@@ -594,6 +641,7 @@ input {
   .housing-and-trending section {
     border-radius: 0px;
     box-sizing: border-box;
+    padding: 15px;
   }
 
   .housing-cards,
